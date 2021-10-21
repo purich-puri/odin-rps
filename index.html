@@ -5,12 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissor</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+    </style>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <button onclick="document.location='oldIndex.html'">
-      <a>Old Version</a>
-    </button>
+    <header>
+      <button onclick="document.location='oldIndex.html'">Old Version</button>
+      <div class="title">ROCK PAPER SCISSORS GAME</div>
+    </header>
+    <div class="playerButtonChoice">
+      <button type="button" class="btn btn-primary">ROCK</button>
+      <button type="button" class="btn btn-primary">PAPER</button>
+      <button type="button" class="btn btn-primary">SCISSOR</button>
+    </div>
+    <div class="resultContainer">
+      <div>PLAYER: .... , CPU: ...</div>
+      <div>PLAYER WON: 0, CPU WON: 0, DRAW: 0</div>
+      <div>Game 0 of 5</div>
+      <div>
+        <button type="button" class="btn btn-danger">RESET</button>
+      </div>
+    </div>
+
+    <footer>PURICHPURI</footer>
     <script src="index.js"></script>
   </body>
 </html>
