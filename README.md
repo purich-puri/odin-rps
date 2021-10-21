@@ -1,0 +1,3 @@
+ROCK PAPER SCISSORS GAME
+
+using vanilla HTML, CSS and JS
