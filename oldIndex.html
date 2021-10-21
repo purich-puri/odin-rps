@@ -9,6 +9,10 @@
   <body>
     <div>
       <button onclick="document.location='index.html'">Return</button>
+      <button onclick="window.location.reload()">Play Again</button>
+    </div>
+    <div style="display: flex; justify-content: center">
+      Press F12 to bring up the console tab to view the scores.
     </div>
 
     <script>
@@ -112,6 +116,10 @@
 
       do {
         var playerChoice = prompt("Please type rock, paper or scissor", "rock");
+        if (playerChoice === null) {
+          console.log("GAME OVER!");
+          break;
+        }
         playRound();
 
         //console.log(playerSelection, computerSelection);
