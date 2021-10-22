@@ -29,10 +29,10 @@ function clearStat() {
   playerWon = 0;
   cpuWon = 0;
   draw = 0;
-  document.getElementById("resultDisplay").innerHTML = "";
-  document.getElementById("winCount").innerHTML =
+  document.getElementById("resultDisplay").textContent = "";
+  document.getElementById("winCount").textContent =
     "PLAYER WON: " + playerWon + ", CPU WON: " + cpuWon + ", DRAW: " + draw;
-  document.getElementById("gameCount").innerHTML = "GAME " + count + " of 5";
+  document.getElementById("gameCount").textContent = "GAME " + count + " of 5";
 
   let elems = document.querySelectorAll(".choiceBtn");
   for (let i = 0; i < elems.length; i++) {
@@ -59,7 +59,7 @@ function computerPlay() {
 function playRound() {
   if (playerSelection === computerSelection) {
     draw++;
-    document.getElementById("resultDisplay").innerHTML = "DRAW";
+    document.getElementById("resultDisplay").textContent = "DRAW";
     //console.log("DRAW");
   } else if (
     (playerSelection === "rock" && computerSelection === "scissor") ||
@@ -67,15 +67,15 @@ function playRound() {
     (playerSelection === "scissor" && computerSelection === "paper")
   ) {
     playerWon++;
-    document.getElementById("resultDisplay").innerHTML = "PLAYER WON";
+    document.getElementById("resultDisplay").textContent = "PLAYER WON";
     //console.log("WIN");
   } else {
     cpuWon++;
-    document.getElementById("resultDisplay").innerHTML = "CPU WON";
+    document.getElementById("resultDisplay").textContent = "CPU WON";
     //console.log("LOSE");
   }
-  document.getElementById("winCount").innerHTML =
+  document.getElementById("winCount").textContent =
     "PLAYER WON: " + playerWon + ", CPU WON: " + cpuWon + ", DRAW: " + draw;
   count++;
-  document.getElementById("gameCount").innerHTML = "GAME " + count + " of 5";
+  document.getElementById("gameCount").textContent = "GAME " + count + " of 5";
 }
