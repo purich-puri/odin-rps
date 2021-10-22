@@ -25,6 +25,9 @@ header button {
 .title {
   font-size: x-large;
   font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .playerButtonChoice {

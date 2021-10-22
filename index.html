@@ -22,23 +22,43 @@
   <body>
     <header>
       <button onclick="document.location='oldIndex.html'">Old Version</button>
-      <div class="title">ROCK PAPER SCISSORS GAME</div>
     </header>
+    <div class="title">ROCK PAPER SCISSORS GAME</div>
     <div class="playerButtonChoice">
-      <button type="button" class="btn btn-primary">ROCK</button>
-      <button type="button" class="btn btn-primary">PAPER</button>
-      <button type="button" class="btn btn-primary">SCISSOR</button>
+      <button
+        type="button"
+        class="choiceBtn btn btn-primary"
+        onclick="playerPicked('rock')"
+      >
+        ROCK
+      </button>
+      <button
+        type="button"
+        class="choiceBtn btn btn-primary"
+        onclick="playerPicked('paper')"
+      >
+        PAPER
+      </button>
+      <button
+        type="button"
+        class="choiceBtn btn btn-primary"
+        onclick="playerPicked('scissor')"
+      >
+        SCISSOR
+      </button>
     </div>
     <div class="resultContainer">
-      <div>PLAYER: .... , CPU: ...</div>
-      <div>PLAYER WON: 0, CPU WON: 0, DRAW: 0</div>
-      <div>Game 0 of 5</div>
+      <div id="resultDisplay"></div>
+      <div id="winCount">PLAYER WON: 0, CPU WON: 0, DRAW: 0</div>
+      <div id="gameCount">Game 0 of 5</div>
       <div>
-        <button type="button" class="btn btn-danger">RESET</button>
+        <button type="button" class="btn btn-danger" onclick="clearStat()">
+          RESET
+        </button>
       </div>
     </div>
 
     <footer>PURICHPURI</footer>
-    <script src="index.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
